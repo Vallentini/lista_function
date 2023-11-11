@@ -6,11 +6,18 @@
     */
 
     //Entrada
-
-
+    const h = parseFloat(prompt("Informe a altura do triângulo:").replace(",","."));
+    const b = parseFloat(prompt("Informe a base do triângulo").replace(",","."));
     //Processamento
-
-
+    function calcularArea() {
+        if (isNaN(b) && isNaN(h)) {
+            return "Informe valores válidos";
+        }
+        else if (!isNaN(b) && !isNaN(h)) {
+            return `A área é: ${((b * h) / 2)}`;
+        }
+    }
     //Saída
-
+    let resposta = calcularArea();
+    alert(resposta);
 </script>

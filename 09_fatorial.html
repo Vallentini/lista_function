@@ -5,11 +5,24 @@
     */
 
     //Entrada
-
-
+    let number = parseFloat(prompt("Informe um número inteiro:"));
     //Processamento
+    function calcularFatorial(number) {
+        let fatorial = 0
+        if (number == 0 || number == 1) {
+            return "Inválido";
+        }
+        else {
+            let resultado = 1;
+            for (let l = 2; l <= number; l++) {
+                resultado *= l;                
+            }
 
-
+            return resultado;
+        }
+    }
     //Saída
+    resultado = calcularFatorial(number);
+    alert(resultado);
 
 </script>

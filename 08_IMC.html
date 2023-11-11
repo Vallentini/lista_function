@@ -6,11 +6,20 @@
     */
 
     //Entrada
-
-
+    let peso = Number(prompt("Informe seu peso:"));
+    let altura = Number(prompt("Informe sua altura:").replace(",","."));
     //Processamento
-
-
+    function calcularIMC(peso, altura) {
+        if (isNaN(peso) || isNaN(altura)) {
+            return "Inválido";
+        }
+        else {
+            let imc = peso / (altura ** 2);
+            return `IMC é: ${imc.toFixed(2).replace(".",",")}`;
+        }
+    }
     //Saída
+    let resposta = calcularIMC(peso, altura);
+    alert(resposta);
 
 </script>

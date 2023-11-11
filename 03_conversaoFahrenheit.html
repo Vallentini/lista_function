@@ -6,11 +6,17 @@
     */
 
     //Entrada
-
-
+    const temp = parseFloat(prompt("Informe a temperatura em graus Celsius:").replace(",","."));
     //Processamento
-
-
+    function conversaoTemperatura() {
+        if (isNaN(temp)) {
+            return "Informe um número";
+        }
+        else if (!isNaN(temp)) {
+            return `A temperatura em graus Fahrenheit ${((9 * temp + 160) / 5).toFixed(2).replace(".",",")}`;
+        }
+    }
     //Saída
-
+    let resposta = conversaoTemperatura();
+    alert(resposta);
 </script>

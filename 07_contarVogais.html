@@ -7,11 +7,23 @@
     */
 
     //Entrada
-
+    let palavra = prompt("Informe uma palavra:").toLowerCase();
+    let letras = ["a", "e", "i", "o", "u"];
 
     //Processamento
+    function contarVogais(vogal) {
+        let vogais = 0;
 
+        let separada = Array.from(vogal)
+        for (let item of separada) {
+            if (letras.includes(item)) {
+                vogais++
 
+            }
+        }
+        return `Nùmero de vogais: ${vogais}`;
+    }
     //Saída
-
+    let resposta = contarVogais(palavra);
+    alert(resposta);
 </script>

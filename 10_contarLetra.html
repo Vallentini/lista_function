@@ -6,11 +6,22 @@
     */
 
     //Entrada
-
-
+    let frase = prompt("Escreva uma frase:").trim().toLowerCase();
+    let letra = prompt("Informe a letra que deseja que o programa conte:").trim().toLowerCase();
     //Processamento
+    function contarLetra(contarl) {
+        let contar = 0;
 
-
+        let letraFrase = Array.from(contarl);
+            for (let item of letraFrase) {
+                if (item == letra) {
+                    contar++;
+                }
+            }
+            return `A quantidade de vezes que a letra escolhida aparece na palavra é: ${contar}`
+    }
     //Saída
+    let resposta = contarLetra(frase);
+    alert(resposta);
 
 </script>

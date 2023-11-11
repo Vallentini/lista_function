@@ -5,11 +5,19 @@
     */
 
     //Entrada
-
-
+    let number = Number(prompt("Informe um número:").trim().toLowerCase());
     //Processamento
-
-
+    function verificarPrimo() {
+        for (let index = 2; index < Math.sqrt(number); index++) {
+            if (number % index === 0) {
+            return "Não é primo";
+            }
+            else{
+                return "É primo.";
+            }
+        }
+    }
     //Saída
-
+    let resposta = verificarPrimo();
+    alert(resposta);
 </script>

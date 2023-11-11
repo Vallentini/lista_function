@@ -6,11 +6,12 @@
     */
 
     //Entrada
-
-
+    let numero = parseInt(prompt("Informe um número inteiro que deseja calcular o cubo:"));
     //Processamento
-
-
+    function calcularCubo() {
+        return `O cubo é ${Math.pow(numero, 3)}`;
+    }
     //Saída
-
+    let resposta = calcularCubo();
+    alert(resposta);
 </script>
